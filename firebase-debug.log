@@ -1,0 +1,431 @@
+[debug] [2023-04-16T21:11:45.973Z] ----------------------------------------------------------------------
+[debug] [2023-04-16T21:11:45.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vladi\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-16T21:11:45.981Z] CLI Version:   11.23.1
+[debug] [2023-04-16T21:11:45.982Z] Platform:      win32
+[debug] [2023-04-16T21:11:45.983Z] Node Version:  v18.12.1
+[debug] [2023-04-16T21:11:45.986Z] Time:          Mon Apr 17 2023 00:11:45 GMT+0300 (Moscow Standard Time)
+[debug] [2023-04-16T21:11:45.986Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-16T21:11:46.154Z] Object ".hosting" in "firebase.json" has unknown property: {"additionalProperty":"frameworksBackend"}
+[debug] [2023-04-16T21:11:46.156Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2023-04-16T21:11:46.156Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-04-16T21:11:46.174Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-16T21:11:46.176Z] > authorizing via signed-in user (vladislavmetik@gmail.com)
+[debug] [2023-04-16T21:11:46.178Z] [iam] checking project juni-b86dd for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-16T21:11:46.184Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions [none]
+[debug] [2023-04-16T21:11:46.185Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:11:46.185Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-16T21:11:47.199Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions 200
+[debug] [2023-04-16T21:11:47.201Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-16T21:11:47.206Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd [none]
+[debug] [2023-04-16T21:11:47.545Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd 200
+[debug] [2023-04-16T21:11:47.545Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd {"projectId":"juni-b86dd","projectNumber":"46219637232","displayName":"Juni","name":"projects/juni-b86dd","resources":{"hostingSite":"juni-b86dd"},"state":"ACTIVE","etag":"1_a23416c8-d323-477c-869f-ce3a2b5a89c9"}
+[debug] [2023-04-16T21:11:54.220Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/juni-b86dd/sites pageToken=&pageSize=10
+[debug] [2023-04-16T21:11:55.348Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/juni-b86dd/sites 200
+[debug] [2023-04-16T21:11:55.349Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/juni-b86dd/sites {"sites":[{"name":"projects/juni-b86dd/sites/juni-b86dd","defaultUrl":"https://juni-b86dd.web.app","appId":"1:46219637232:web:648fe028feac7e7be6ad35","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-16T21:11:55.352Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:46219637232:web:648fe028feac7e7be6ad35/config [none]
+[debug] [2023-04-16T21:11:56.360Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:46219637232:web:648fe028feac7e7be6ad35/config 200
+[debug] [2023-04-16T21:11:56.361Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:46219637232:web:648fe028feac7e7be6ad35/config {"projectId":"juni-b86dd","appId":"1:46219637232:web:648fe028feac7e7be6ad35","storageBucket":"juni-b86dd.appspot.com","apiKey":"AIzaSyDRiSBPQI6tcknRgae-tvIgn_yOfossWSg","authDomain":"juni-b86dd.firebaseapp.com","messagingSenderId":"46219637232","measurementId":"G-MLP0XS6PFR"}
+[info] 
+[info] === Deploying to 'juni-b86dd'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-04-16T21:14:37.646Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd [none]
+[debug] [2023-04-16T21:14:38.028Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd 200
+[debug] [2023-04-16T21:14:38.028Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd {"projectId":"juni-b86dd","projectNumber":"46219637232","displayName":"Juni","name":"projects/juni-b86dd","resources":{"hostingSite":"juni-b86dd"},"state":"ACTIVE","etag":"1_a23416c8-d323-477c-869f-ce3a2b5a89c9"}
+[info] i  functions: preparing codebase firebase-frameworks-juni-b86dd for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-16T21:14:38.034Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-16T21:14:38.034Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:38.037Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-16T21:14:38.037Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:38.040Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-16T21:14:38.040Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:38.042Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-16T21:14:38.042Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:39.062Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-16T21:14:39.063Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2023-04-16T21:14:39.070Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2023-04-16T21:14:39.070Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:39.095Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-16T21:14:39.096Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2023-04-16T21:14:39.100Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2023-04-16T21:14:39.101Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:39.108Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-16T21:14:39.109Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-16T21:14:39.111Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-16T21:14:39.111Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudfunctions.googleapis.com. Enabling now... 
+[debug] [2023-04-16T21:14:39.113Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-04-16T21:14:39.114Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:41.275Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-04-16T21:14:41.275Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-04-16T21:14:41.413Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com:enable 200
+[debug] [2023-04-16T21:14:41.413Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2023-04-16T21:14:41.564Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com:enable 200
+[debug] [2023-04-16T21:14:41.564Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2023-04-16T21:14:51.284Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-16T21:14:51.284Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:51.425Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-16T21:14:51.425Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:51.568Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-16T21:14:51.568Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:14:52.303Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-16T21:14:52.303Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-16T21:14:52.398Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-16T21:14:52.398Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-16T21:14:52.554Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-16T21:14:52.555Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-16T21:14:52.564Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd/adminSdkConfig [none]
+[debug] [2023-04-16T21:14:52.944Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd/adminSdkConfig 200
+[debug] [2023-04-16T21:14:52.944Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd/adminSdkConfig {"projectId":"juni-b86dd","storageBucket":"juni-b86dd.appspot.com"}
+[debug] [2023-04-16T21:14:52.945Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/juni-b86dd/configs [none]
+[debug] [2023-04-16T21:14:53.324Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/juni-b86dd/configs 200
+[debug] [2023-04-16T21:14:53.324Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/juni-b86dd/configs {}
+[debug] [2023-04-16T21:14:53.327Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-16T21:14:57.158Z] > [functions] package.json contents: {
+  "name": "apple-watch-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && firebase deploy"
+  },
+  "dependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "@types/react-dom": "18.0.11",
+    "firebase": "^9.19.1",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4",
+    "sharp": "latest",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-04-16T21:14:57.159Z] Building nodejs source
+[debug] [2023-04-16T21:14:57.162Z] Found functions.yaml. Got spec: {
+  "endpoints": {
+    "ssrjunib86dd": {
+      "platform": "gcfv2",
+      "region": [
+        "us-central1"
+      ],
+      "labels": {},
+      "httpsTrigger": {},
+      "entryPoint": "ssr"
+    }
+  },
+  "specVersion": "v1alpha1",
+  "requiredAPIs": []
+}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\juni-b86dd\functions directory for uploading... 
+[info] i  functions: packaged F:\SelfProjects\apple-watch-landing\.firebase\juni-b86dd\functions (14.97 MB) for uploading 
+[debug] [2023-04-16T21:14:59.775Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/juni-b86dd/locations/-/functions [none]
+[debug] [2023-04-16T21:15:00.578Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/juni-b86dd/locations/-/functions 200
+[debug] [2023-04-16T21:15:00.579Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/juni-b86dd/locations/-/functions {}
+[debug] [2023-04-16T21:15:00.581Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-04-16T21:15:01.784Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/-/functions 200
+[debug] [2023-04-16T21:15:01.785Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-04-16T21:15:01.816Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com [none]
+[debug] [2023-04-16T21:15:01.816Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:01.823Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com [none]
+[debug] [2023-04-16T21:15:01.824Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:01.832Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/pubsub.googleapis.com [none]
+[debug] [2023-04-16T21:15:01.833Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/pubsub.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:01.840Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/storage.googleapis.com [none]
+[debug] [2023-04-16T21:15:01.840Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/storage.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:02.798Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/pubsub.googleapis.com 200
+[debug] [2023-04-16T21:15:02.799Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-04-16T21:15:02.816Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com 200
+[debug] [2023-04-16T21:15:02.816Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2023-04-16T21:15:02.818Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com:enable [none]
+[debug] [2023-04-16T21:15:02.819Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com:enable x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:02.827Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/storage.googleapis.com 200
+[debug] [2023-04-16T21:15:02.827Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-04-16T21:15:02.849Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com 200
+[debug] [2023-04-16T21:15:02.849Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2023-04-16T21:15:02.851Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com:enable [none]
+[debug] [2023-04-16T21:15:02.852Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:04.680Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com:enable 200
+[debug] [2023-04-16T21:15:04.681Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2023-04-16T21:15:04.689Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com:enable 200
+[debug] [2023-04-16T21:15:04.689Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com:enable [omitted]
+[debug] [2023-04-16T21:15:14.686Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com [none]
+[debug] [2023-04-16T21:15:14.687Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:14.691Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com [none]
+[debug] [2023-04-16T21:15:14.691Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:15.677Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com 200
+[debug] [2023-04-16T21:15:15.677Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-04-16T21:15:15.691Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com 200
+[debug] [2023-04-16T21:15:15.691Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/juni-b86dd/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-04-16T21:15:15.700Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-16T21:15:15.705Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-16T21:15:16.772Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-16T21:15:16.773Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-46219637232@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"113624004591135507384"}}
+[debug] [2023-04-16T21:15:16.892Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-16T21:15:16.893Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/46219637232/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-46219637232@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"105507857062852955601"}}
+[debug] [2023-04-16T21:15:16.899Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd [none]
+[debug] [2023-04-16T21:15:17.224Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd 200
+[debug] [2023-04-16T21:15:17.224Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/juni-b86dd {"projectId":"juni-b86dd","projectNumber":"46219637232","displayName":"Juni","name":"projects/juni-b86dd","resources":{"hostingSite":"juni-b86dd"},"state":"ACTIVE","etag":"1_a23416c8-d323-477c-869f-ce3a2b5a89c9"}
+[debug] [2023-04-16T21:15:17.231Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/juni-b86dd/versions [none]
+[debug] [2023-04-16T21:15:17.232Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/juni-b86dd/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-16T21:15:18.974Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/juni-b86dd/versions 200
+[debug] [2023-04-16T21:15:18.974Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/juni-b86dd/versions {"name":"projects/46219637232/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-16T21:15:18.976Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-04-16T21:15:18.976Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions [none]
+[debug] [2023-04-16T21:15:18.976Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions x-goog-quota-user=projects/juni-b86dd
+[debug] [2023-04-16T21:15:18.977Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-16T21:15:19.786Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions 200
+[debug] [2023-04-16T21:15:19.786Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/juni-b86dd:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-16T21:15:19.787Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-04-16T21:15:19.788Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-04-16T21:15:21.894Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-04-16T21:15:21.894Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-46219637232-us-central1/a000b2e8-b80d-41cc-a315-ccc9f8084274.zip?GoogleAccessId=service-46219637232@gcf-admin-robot.iam.gserviceaccount.com&Expires=1681681520&Signature=kzYBtc4tidXjknR5VxBlsReu4%2B8YQyk3omM%2BHtnoGeOTZofo3GwxfrARCNDHqf0ilR2yublNTCExRo9yDq1a2XolVZsTUm6LvFtgw4NPQaIaDgn2o8%2Bdu7ufTVTVbaTb%2BJnXYUr1C5wYTz5HAwxfUMGYtIHvDs0tP4%2F77zpHvlHnVRQYwxFd3qF%2Fzyf73kUcpdgHV%2BwWmgDCFCkzSxPWVI7B6gfO5lPDvxQbpRCCOQvD5kHZ5OMFNpgWszsoDtsLKVveix%2F%2BxmyVTChXxpCcsJPhh7hz1rO%2BRl6232AuMrnL51HQYHLIi5e1plvEsKMt5GlVo63xoK%2Fm5Lhsp9%2FlWg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-46219637232-us-central1","object":"a000b2e8-b80d-41cc-a315-ccc9f8084274.zip"}}
+[debug] [2023-04-16T21:15:21.896Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-46219637232-us-central1/a000b2e8-b80d-41cc-a315-ccc9f8084274.zip GoogleAccessId=service-46219637232%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1681681520&Signature=kzYBtc4tidXjknR5VxBlsReu4%2B8YQyk3omM%2BHtnoGeOTZofo3GwxfrARCNDHqf0ilR2yublNTCExRo9yDq1a2XolVZsTUm6LvFtgw4NPQaIaDgn2o8%2Bdu7ufTVTVbaTb%2BJnXYUr1C5wYTz5HAwxfUMGYtIHvDs0tP4%2F77zpHvlHnVRQYwxFd3qF%2Fzyf73kUcpdgHV%2BwWmgDCFCkzSxPWVI7B6gfO5lPDvxQbpRCCOQvD5kHZ5OMFNpgWszsoDtsLKVveix%2F%2BxmyVTChXxpCcsJPhh7hz1rO%2BRl6232AuMrnL51HQYHLIi5e1plvEsKMt5GlVo63xoK%2Fm5Lhsp9%2FlWg%3D%3D
+[debug] [2023-04-16T21:15:21.896Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-46219637232-us-central1/a000b2e8-b80d-41cc-a315-ccc9f8084274.zip [stream]
+[debug] [2023-04-16T21:15:25.294Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-46219637232-us-central1/a000b2e8-b80d-41cc-a315-ccc9f8084274.zip 200
+[debug] [2023-04-16T21:15:25.295Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-46219637232-us-central1/a000b2e8-b80d-41cc-a315-ccc9f8084274.zip [omitted]
+[info] +  functions: .firebase\juni-b86dd\functions folder uploaded successfully 
+[info] i  hosting[juni-b86dd]: beginning deploy... 
+[info] i  hosting[juni-b86dd]: found 26 files in .firebase\juni-b86dd\hosting 
+[debug] [2023-04-16T21:15:25.457Z] [hosting] uploading with 200 concurrency
+[debug] [2023-04-16T21:15:25.460Z] [hosting] hash cache [LmZpcmViYXNlXGp1bmktYjg2ZGRcaG9zdGluZw] not populated
+[debug] [2023-04-16T21:15:25.610Z] [hosting] hash cache [LmZpcmViYXNlXGp1bmktYjg2ZGRcaG9zdGluZw] stored for 26 files
+[debug] [2023-04-16T21:15:25.610Z] [hosting][hash queue][FINAL] {"max":133,"min":101,"avg":106,"active":0,"complete":26,"success":26,"errored":0,"retried":0,"total":26,"elapsed":146}
+[debug] [2023-04-16T21:15:25.611Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/46219637232/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b:populateFiles [none]
+[debug] [2023-04-16T21:15:25.611Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/46219637232/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b:populateFiles {"files":{"/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/500.html":"668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89","/404.html":"75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812","/index.html":"0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/favicon/16x16.ico":"ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856","/favicon/32x32.ico":"c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238","/favicon/96x96.ico":"ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e","/_next/static/chunks/webpack-8fa1640cc84ba8fe.js":"e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0","/_next/static/chunks/pages/_app-5fbdfbcdfb555d2f.js":"77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84","/_next/static/chunks/pages/_error-54de1933a164a1ff.js":"544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","/_next/static/css/5c1863d44000d7f6.css":"1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a","/_next/static/chunks/pages/index-dd99524f14d6b3e6.js":"e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa","/_next/static/css/876d048b5dab7c28.css":"10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59","/_next/static/media/b1db3e28af9ef94a-s.woff2":"a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50","/_next/static/media/ae9ae6716d4f8bf8-s.woff2":"444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13","/_next/static/PzxzMAqJHKTQjd8gI1pcl/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/PzxzMAqJHKTQjd8gI1pcl/_buildManifest.js":"8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309","/_next/static/media/c0f5ec5bbf5913b7-s.woff2":"eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011","/_next/static/media/b967158bc7d7a9fb-s.woff2":"fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719","/_next/static/media/2aaf0723e720e8b9-s.p.woff2":"344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f","/_next/static/chunks/main-4dcb7f9b52833aba.js":"32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694","/_next/static/media/9c4f34569c9b36ca-s.woff2":"c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5","/_next/static/media/d1d9458b69004127-s.woff2":"02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","/_next/static/chunks/framework-2c79e2a64abdb08b.js":"b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd"}}
+[debug] [2023-04-16T21:15:26.695Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/46219637232/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b:populateFiles 200
+[debug] [2023-04-16T21:15:26.695Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/46219637232/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b:populateFiles {"uploadRequiredHashes":["a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50","eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011","544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84","e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0","668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89","444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13","fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719","1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a","c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5","344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f","75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812","10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59","ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856","f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e","0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294","94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238","dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa","b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd","8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309","02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f","32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files"}
+[debug] [2023-04-16T21:15:26.705Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50 [none]
+[debug] [2023-04-16T21:15:26.705Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50 [stream]
+[debug] [2023-04-16T21:15:26.708Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011 [none]
+[debug] [2023-04-16T21:15:26.708Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011 [stream]
+[debug] [2023-04-16T21:15:26.710Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a [none]
+[debug] [2023-04-16T21:15:26.710Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a [stream]
+[debug] [2023-04-16T21:15:26.712Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [none]
+[debug] [2023-04-16T21:15:26.712Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [stream]
+[debug] [2023-04-16T21:15:26.714Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84 [none]
+[debug] [2023-04-16T21:15:26.714Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84 [stream]
+[debug] [2023-04-16T21:15:26.716Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0 [none]
+[debug] [2023-04-16T21:15:26.716Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0 [stream]
+[debug] [2023-04-16T21:15:26.718Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89 [none]
+[debug] [2023-04-16T21:15:26.718Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89 [stream]
+[debug] [2023-04-16T21:15:26.721Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13 [none]
+[debug] [2023-04-16T21:15:26.722Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13 [stream]
+[debug] [2023-04-16T21:15:26.724Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719 [none]
+[debug] [2023-04-16T21:15:26.724Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719 [stream]
+[debug] [2023-04-16T21:15:26.726Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a [none]
+[debug] [2023-04-16T21:15:26.726Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a [stream]
+[debug] [2023-04-16T21:15:26.728Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5 [none]
+[debug] [2023-04-16T21:15:26.728Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5 [stream]
+[debug] [2023-04-16T21:15:26.730Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f [none]
+[debug] [2023-04-16T21:15:26.730Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f [stream]
+[debug] [2023-04-16T21:15:26.732Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812 [none]
+[debug] [2023-04-16T21:15:26.732Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812 [stream]
+[debug] [2023-04-16T21:15:26.734Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59 [none]
+[debug] [2023-04-16T21:15:26.734Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59 [stream]
+[debug] [2023-04-16T21:15:26.737Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856 [none]
+[debug] [2023-04-16T21:15:26.737Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856 [stream]
+[debug] [2023-04-16T21:15:26.739Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c [none]
+[debug] [2023-04-16T21:15:26.739Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c [stream]
+[debug] [2023-04-16T21:15:26.740Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e [none]
+[debug] [2023-04-16T21:15:26.741Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e [stream]
+[debug] [2023-04-16T21:15:26.742Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294 [none]
+[debug] [2023-04-16T21:15:26.742Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294 [stream]
+[debug] [2023-04-16T21:15:26.743Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c [none]
+[debug] [2023-04-16T21:15:26.743Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c [stream]
+[debug] [2023-04-16T21:15:26.744Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238 [none]
+[debug] [2023-04-16T21:15:26.745Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238 [stream]
+[debug] [2023-04-16T21:15:26.748Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [none]
+[debug] [2023-04-16T21:15:26.748Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [stream]
+[debug] [2023-04-16T21:15:26.749Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa [none]
+[debug] [2023-04-16T21:15:26.750Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa [stream]
+[debug] [2023-04-16T21:15:26.752Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd [none]
+[debug] [2023-04-16T21:15:26.752Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd [stream]
+[debug] [2023-04-16T21:15:26.753Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309 [none]
+[debug] [2023-04-16T21:15:26.754Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309 [stream]
+[debug] [2023-04-16T21:15:26.755Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f [none]
+[debug] [2023-04-16T21:15:26.756Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f [stream]
+[debug] [2023-04-16T21:15:26.757Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694 [none]
+[debug] [2023-04-16T21:15:26.757Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694 [stream]
+[debug] [2023-04-16T21:15:26.758Z] [hosting][populate queue][FINAL] {"max":1098,"min":1098,"avg":1098,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1151}
+[debug] [2023-04-16T21:15:26.758Z] [hosting] uploads queued: 26
+[debug] [2023-04-16T21:15:27.782Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 200
+[debug] [2023-04-16T21:15:27.782Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888 [stream]
+[debug] [2023-04-16T21:15:27.932Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd 200
+[debug] [2023-04-16T21:15:27.932Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd [stream]
+[debug] [2023-04-16T21:15:27.933Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f 200
+[debug] [2023-04-16T21:15:27.934Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/02aeb5a5598b157615426099ea0a51cbd3a091cb73f6edaa2a18795b522e628f [stream]
+[debug] [2023-04-16T21:15:28.032Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a 200
+[debug] [2023-04-16T21:15:28.032Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a [stream]
+[debug] [2023-04-16T21:15:28.034Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa 200
+[debug] [2023-04-16T21:15:28.034Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e5431ce7c67de8d3634f1a7c4d6c582937c5028dbe25a3059b6012fc26cbb2fa [stream]
+[debug] [2023-04-16T21:15:28.054Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309 200
+[debug] [2023-04-16T21:15:28.055Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/8ad50dcc96a88903c791e74158c85445df367c827c530410dc419a0478ef5309 [stream]
+[debug] [2023-04-16T21:15:28.155Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294 200
+[debug] [2023-04-16T21:15:28.156Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/0fcd678cf18b83df1b1b3e296c8c23844f62385bc0a008099707d810f4106294 [stream]
+[debug] [2023-04-16T21:15:28.302Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812 200
+[debug] [2023-04-16T21:15:28.303Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/75d4131761d9747dc3bcdde9ac0d831c9cbafd85992abd837f5c740454612812 [stream]
+[debug] [2023-04-16T21:15:28.332Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50 200
+[debug] [2023-04-16T21:15:28.332Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/a9589069016bb9c4669180398e574dc1d099b1b19353bae2512a956aacb92f50 [stream]
+[debug] [2023-04-16T21:15:28.334Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13 200
+[debug] [2023-04-16T21:15:28.334Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/444154b54e62d875beef733763cc6db8ca6e0751c3d61243f24b152476dffa13 [stream]
+[debug] [2023-04-16T21:15:28.351Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0 200
+[debug] [2023-04-16T21:15:28.352Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/e18540981287b4a21ccdd81034dd2abe76386931e64923f470ee843232c97dd0 [stream]
+[debug] [2023-04-16T21:15:28.354Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84 200
+[debug] [2023-04-16T21:15:28.354Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/77069df78e1bd114df6d3e5310fd1ae3535e1871c9bd42520e743acda76d6d84 [stream]
+[debug] [2023-04-16T21:15:28.462Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a 200
+[debug] [2023-04-16T21:15:28.462Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/1df5ece20687102f2347d9a0bc04421417666102c3d856a96fdf98e72ac0df2a [stream]
+[debug] [2023-04-16T21:15:28.464Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011 200
+[debug] [2023-04-16T21:15:28.464Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/eafae47139e0d9821bdfd9ce7d9edd8c3d9f7af0390d9b2fc6353f9ba6b9f011 [stream]
+[debug] [2023-04-16T21:15:28.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59 200
+[debug] [2023-04-16T21:15:28.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/10bd21982a5a35f6905e59ec498924f43cc288e2fd2e2a07f24d6de9c6a8fd59 [stream]
+[debug] [2023-04-16T21:15:28.492Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f 200
+[debug] [2023-04-16T21:15:28.492Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/344e115cd48b202947c9209994dfdaa1b416a68f15e991e9612a8436d8fd738f [stream]
+[debug] [2023-04-16T21:15:28.494Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719 200
+[debug] [2023-04-16T21:15:28.494Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/fd55fd4f464d99f6da7ab39feace0b3e59b4da6acf199e63185aa75cbdf70719 [stream]
+[debug] [2023-04-16T21:15:28.495Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89 200
+[debug] [2023-04-16T21:15:28.496Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/668492b1383c7d53d3c34f36d67c5523f0bd2ba0809146f0b6d22535e031ed89 [stream]
+[debug] [2023-04-16T21:15:28.512Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c 200
+[debug] [2023-04-16T21:15:28.512Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c [stream]
+[debug] [2023-04-16T21:15:28.514Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694 200
+[debug] [2023-04-16T21:15:28.514Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/32e04c5b9c0300b3de6bf510136d8da0fd1d7b97a2d72cf2c91d7a81e30e7694 [stream]
+[debug] [2023-04-16T21:15:28.532Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c 200
+[debug] [2023-04-16T21:15:28.532Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c [stream]
+[debug] [2023-04-16T21:15:28.592Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e 200
+[debug] [2023-04-16T21:15:28.592Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ed6baeb74b5e6e434037b8b88e39be15265288e50f4f4b8bfd93f451a5df3a6e [stream]
+[debug] [2023-04-16T21:15:28.691Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238 200
+[debug] [2023-04-16T21:15:28.692Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c13bf1b21f254bc0f7a99e48dd047f963333a1b2ed1848850d64d0e8ac0af238 [stream]
+[debug] [2023-04-16T21:15:28.762Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856 200
+[debug] [2023-04-16T21:15:28.762Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/ad4dd98cdaef70edcdbe3d7db8930fbbcc38b133bc51ac2214f791fb08a2f856 [stream]
+[debug] [2023-04-16T21:15:28.802Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc 200
+[debug] [2023-04-16T21:15:28.802Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc [stream]
+[debug] [2023-04-16T21:15:28.992Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5 200
+[debug] [2023-04-16T21:15:28.992Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/juni-b86dd/versions/ff1ab7c9ac3ef44b/files/c9ae8dd6969c1396e5fc39f6adb169d5ff1c3b4b23460e8c3e7611668be8f3e5 [stream]
+[debug] [2023-04-16T21:15:28.992Z] [hosting][upload queue][FINAL] {"max":2293,"min":1088,"avg":1680.423076923077,"active":0,"complete":26,"success":26,"errored":0,"retried":0,"total":26,"elapsed":2296}
+[info] +  hosting[juni-b86dd]: file upload complete 
+[debug] [2023-04-16T21:15:28.995Z] [hosting] deploy completed after 3682ms
+[info] i  functions: creating Node.js 18 function firebase-frameworks-juni-b86dd:ssrjunib86dd(us-central1)... 
+[debug] [2023-04-16T21:15:29.017Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions functionId=ssrjunib86dd
+[debug] [2023-04-16T21:15:29.017Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions {"name":"projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd","buildConfig":{"runtime":"nodejs18","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-uploads-46219637232-us-central1","object":"a000b2e8-b80d-41cc-a315-ccc9f8084274.zip"}},"environmentVariables":{}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","__FIREBASE_DEFAULTS__":"{\"config\":{\"projectId\":\"juni-b86dd\",\"appId\":\"1:46219637232:web:648fe028feac7e7be6ad35\",\"storageBucket\":\"juni-b86dd.appspot.com\",\"apiKey\":\"AIzaSyDRiSBPQI6tcknRgae-tvIgn_yOfossWSg\",\"authDomain\":\"juni-b86dd.firebaseapp.com\",\"messagingSenderId\":\"46219637232\",\"measurementId\":\"G-MLP0XS6PFR\"},\"_authTokenSyncURL\":\"/__session\"}","FIREBASE_CONFIG":"{\"projectId\":\"juni-b86dd\",\"storageBucket\":\"juni-b86dd.appspot.com\"}","GCLOUD_PROJECT":"juni-b86dd","EVENTARC_CLOUD_EVENT_SOURCE":"projects/juni-b86dd/locations/us-central1/services/ssrjunib86dd"},"availableMemory":"256Mi"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-juni-b86dd","firebase-functions-hash":"fee42c6bd0d258388b51c65508a9526f9d4bbe48"}}
+[debug] [2023-04-16T21:15:31.246Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions 400
+[debug] [2023-04-16T21:15:31.246Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/juni-b86dd/locations/us-central1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrjunib86dd. spec.template.spec.containers.resources.limits.memory: Invalid value specified for memory. For the specified value, maxScale may not exceed 80.\nConsider running your workload in a region with greater capacity, decreasing your requested memory-per-instances, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: HTTP Error: 400, Could not create Cloud Run service ssrjunib86dd. spec.template.spec.containers.resources.limits.memory: Invalid value specified for memory. For the specified value, maxScale may not exceed 80.
+Consider running your workload in a region with greater capacity, decreasing your requested memory-per-instances, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account. 
+[warn] !  functions: failed to create function projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd 
+[error] Failed to create function projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd
+[debug] [2023-04-16T21:15:31.276Z] Total Function Deployment time: 2247
+[debug] [2023-04-16T21:15:31.276Z] 1 Functions Deployed
+[debug] [2023-04-16T21:15:31.276Z] 1 Functions Errored
+[debug] [2023-04-16T21:15:31.276Z] 0 Function Deployments Aborted
+[debug] [2023-04-16T21:15:31.276Z] Average Function Deployment time: 2244
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-juni-b86dd:ssrjunib86dd(us-central1)
+[debug] [2023-04-16T21:15:31.406Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-04-16T21:15:31.411Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/juni-b86dd/locations/us-central1/repositories/gcf-artifacts/packages/ssrjunib86dd [none]
+[debug] [2023-04-16T21:15:31.413Z] >>> [apiv2][query] GET https://us.gcr.io/v2/juni-b86dd/gcf/us-central1/tags/list [none]
+[debug] [2023-04-16T21:15:32.384Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/juni-b86dd/locations/us-central1/repositories/gcf-artifacts/packages/ssrjunib86dd 404
+[debug] [2023-04-16T21:15:32.385Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/juni-b86dd/locations/us-central1/repositories/gcf-artifacts/packages/ssrjunib86dd {"error":{"code":404,"message":"Package \"projects/juni-b86dd/locations/us-central1/repositories/gcf-artifacts/packages/ssrjunib86dd\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-04-16T21:15:33.474Z] <<< [apiv2][status] GET https://us.gcr.io/v2/juni-b86dd/gcf/us-central1/tags/list 200
+[debug] [2023-04-16T21:15:33.474Z] <<< [apiv2][body] GET https://us.gcr.io/v2/juni-b86dd/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"juni-b86dd/gcf/us-central1","tags":[]}
+[debug] [2023-04-16T21:15:33.475Z] Could not find image for function projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd
+[debug] [2023-04-16T21:15:33.475Z] Functions deploy failed.
+[debug] [2023-04-16T21:15:33.475Z] {
+  "endpoint": {
+    "id": "ssrjunib86dd",
+    "project": "juni-b86dd",
+    "region": "us-central1",
+    "entryPoint": "ssr",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "__FIREBASE_DEFAULTS__": "{\"config\":{\"projectId\":\"juni-b86dd\",\"appId\":\"1:46219637232:web:648fe028feac7e7be6ad35\",\"storageBucket\":\"juni-b86dd.appspot.com\",\"apiKey\":\"AIzaSyDRiSBPQI6tcknRgae-tvIgn_yOfossWSg\",\"authDomain\":\"juni-b86dd.firebaseapp.com\",\"messagingSenderId\":\"46219637232\",\"measurementId\":\"G-MLP0XS6PFR\"},\"_authTokenSyncURL\":\"/__session\"}",
+      "FIREBASE_CONFIG": "{\"projectId\":\"juni-b86dd\",\"storageBucket\":\"juni-b86dd.appspot.com\"}",
+      "GCLOUD_PROJECT": "juni-b86dd",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/juni-b86dd/locations/us-central1/services/ssrjunib86dd"
+    },
+    "codebase": "firebase-frameworks-juni-b86dd",
+    "cpu": 1,
+    "concurrency": 80,
+    "targetedByOnly": false,
+    "hash": "fee42c6bd0d258388b51c65508a9526f9d4bbe48"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/juni-b86dd/locations/us-central1/functions/ssrjunib86dd",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrjunib86dd. spec.template.spec.containers.resources.limits.memory: Invalid value specified for memory. For the specified value, maxScale may not exceed 80.\nConsider running your workload in a region with greater capacity, decreasing your requested memory-per-instances, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrjunib86dd. spec.template.spec.containers.resources.limits.memory: Invalid value specified for memory. For the specified value, maxScale may not exceed 80.\nConsider running your workload in a region with greater capacity, decreasing your requested memory-per-instances, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 500
+  }
+}
+[debug] [2023-04-16T21:15:33.603Z] Error: Failed to create function ssrjunib86dd in region us-central1
+    at C:\Users\vladi\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (C:\Users\vladi\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:269:32)
+    at async Fabricator.createEndpoint (C:\Users\vladi\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\vladi\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions

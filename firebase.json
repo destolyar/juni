@@ -1,0 +1,40 @@
+{
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west1"
+    },
+    "functions": {
+      "source": ".output/server",
+      "runtime": "nodejs16",
+      "main": "index.mjs"
+    },
+    "hosting": [
+      {
+        "site": "juni",
+        "public": ".output/public",
+        "cleanUrls": true,
+        "rewrites": [{
+          "source": "**",
+          "run": {
+            "serviceId": "dreamchaiser-diary",
+            "region": "us-east1"
+          }
+        }],
+        "ignore": [
+          "firebase.json",
+          "**/.*",
+          "**/node_modules/**"
+        ]
+      }
+    ],
+    "projects": {
+      "default": "juni"
+    }
+  }
+}
