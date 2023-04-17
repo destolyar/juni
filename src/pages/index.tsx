@@ -1,13 +1,8 @@
 import { Header } from '@/components/Header'
 import Head from 'next/head'
-import Image from "next/image"
 import styles from '@/styles/Home.module.scss'
-import { getAnalytics } from 'firebase/analytics';
-import { app } from '@/firebase';
 
-export default function Home() {
-  const analytics = getAnalytics(app);
-  
+export default function Home() {  
   return (
     <>
       <Head>

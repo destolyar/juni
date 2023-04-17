@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyDRiSBPQI6tcknRgae-tvIgn_yOfossWSg",
   authDomain: "juni-b86dd.firebaseapp.com",
   projectId: "juni-b86dd",
@@ -10,5 +10,3 @@ const firebaseConfig = {
   appId: "1:46219637232:web:648fe028feac7e7be6ad35",
   measurementId: "G-MLP0XS6PFR"
 };
-
-export const app = initializeApp(firebaseConfig);
