@@ -1,0 +1,12 @@
+@import "../utils/utils.scss";
+
+.container {
+  position: relative;
+  height: 70px;
+  width: 112.36px;
+
+  @include tablets {
+    height: 40px;
+    width: 64.21px;
+  }
+}

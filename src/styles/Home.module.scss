@@ -1,0 +1,83 @@
+@import "./utils/utils.scss";
+
+.main {}
+
+.buyReasons, .contacts, .tech, .watch {
+  padding: 20px 60px;
+
+  @include tablets {
+    padding: 20px;
+  }
+}
+
+.pageTitle {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.buyContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.buyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(0, 26, 255);
+}
+
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.watchInfo {
+  color: white;
+  max-width: 500px;
+}
+
+.watchImage {
+  max-width: 50%;
+  height: auto;
+
+  @include tablets {
+    max-width: 100%;
+  }
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+
+  .table {
+    margin-top: 20px;
+    max-width: 30%;
+
+    @include tablets {
+      max-width: 100%;
+    }
+  }
+}
+
+.contacts {
+}

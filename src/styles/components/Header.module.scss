@@ -1,0 +1,14 @@
+@import "../utils/utils.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  // background-color: #006CFF;
+  background-color: #000000;
+
+  @include tablets {
+    height: 60px;
+  }
+}
