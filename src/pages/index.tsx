@@ -46,7 +46,7 @@ export default function Home() {
           </ol>
         </section>
         <section className={styles.tech}>
-          <h2>Второе поколение внутриканальных наушников Apple AirPoods Pro.</h2>
+          <h2>Второе поколение внутриканальных наушников Apple AirPoods Pro:</h2>
           <ul>
             <li>Новый фирменный чип Apple H2</li>
             <li>Улучшенная система активного шумоподавления</li>
