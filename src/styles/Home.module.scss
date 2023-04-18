@@ -2,8 +2,12 @@
 
 .main {}
 
-.buyReasons, .contacts, .tech, .watch {
-  padding: 20px 60px;
+.buyReasons,
+.contacts,
+.tech,
+.item,
+.instruction {
+  padding: 40px 60px;
 
   @include tablets {
     padding: 20px;
@@ -38,7 +42,7 @@
   background-color: rgb(0, 26, 255);
 }
 
-.watch {
+.item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,21 +53,24 @@
   }
 }
 
-.watchInfo {
+.itemInfo {
   color: white;
   max-width: 500px;
 }
 
-.watchImage {
-  max-width: 50%;
+.itemImage {
+  max-width: 30%;
   height: auto;
 
   @include tablets {
+    margin-top: 20px;
     max-width: 100%;
   }
 }
 
-.tech {
+.tech {}
+
+.instruction {
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -80,4 +87,6 @@
 }
 
 .contacts {
+  background-color: black;
+  color: white;
 }
