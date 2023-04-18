@@ -9,7 +9,6 @@ export default function Home() {
         <title>Купить Apple Airpods Pro 2 поколения в Juni</title>
         <meta name='description' content="Купите беспроводные наушники Apple Airpods Pro 2 в интернет-магазине Juni. Специальные скидки и быстрая доставка по всей РБ и Минску." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="yandex-verification" content="ac43dd59a4f9b939" />
         <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon/16x16.ico" />
         <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon/32x32.ico" />
         <link rel="icon" type="image/x-icon" sizes="96x96" href="/favicon/48x48.ico" />
